@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="button-container">
+        <input [(ngModel)]="url" [placeholder]="'Input The URL'">
+        <a class="button" (click)="onShorten()">Shorten</a>
+    </div>
+    <div class="url-container">
+        <p *ngIf="firstShortUrl$ != null">Short Url: 
+            <a class="link-button" target="_blank" href="https://{{firstShortUrl$ | async}}">
+                {{firstShortUrl$ | async}}
+            </a>
+        </p>
+        <p *ngIf="secondShortUrl$ != null">
+            Short Url 2: <a class="link-button" target="_blank" href="https://{{secondShortUrl$ | async}}">
+                {{secondShortUrl$ | async}}
+            </a>
+        </p>
+    </div>
+</div>
