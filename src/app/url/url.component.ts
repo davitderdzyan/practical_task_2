@@ -26,7 +26,8 @@ export class UrlComponent implements OnDestroy {
     this.destroy$.complete();
   }
 
-  onShorten(): void{
+  onShorten(): void {
     this.store.dispatch(fetchShorterUrl({ url: this.url }));
+    this.url = "";
   }
 }
