@@ -19,6 +19,8 @@ input {
     text-align: center;
     padding: 8px 30px;
     border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .container {
